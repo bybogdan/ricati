@@ -16,7 +16,6 @@ const handler = async (req: Request): Promise<Response> => {
   if (!prompt) {
     return new Response("No prompt in the request", { status: 400 });
   }
-
   const payload: OpenAIStreamPayload = {
     model: "text-davinci-003",
     prompt,
